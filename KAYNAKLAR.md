@@ -1,0 +1,37 @@
+# Kullanılan malzemeler (çoğu CC0; yazı tipleri OFL; askerler Mixamo)
+- Poly Haven: ortam modelleri, dokular, HDRI, Servis 9, sürgülü tüfek, katana, balta, şövalye hançeri
+- OpenGameArt: AKM, The Free Firearm Sound Library
+- Karakterler: Microsoft Rocketbox Avatar Library (MIT, © Microsoft Corporation), renkleri ve iskeleti bu oyuna göre değiştirildi (15 karakter). Kasket, bıyık, gözlük ve bütün yeni bıçaklar bu oyun için modellendi
+- Karakter hareketleri: Adobe Mixamo (oyun içinde kullanım; dosyalar tek başına dağıtılamaz)
+- Davul 9, PM 9: 3dmodelscc0.com (CC0; geliştiricinin Web Arena dosyasından)
+- Boru 9, Keskin .308: 3dmodelscc0.com (CC0); Kartal .50, Seri 9, Pompalı, Uzun .338 (Long Range Sentinel): geliştiricinin Meshy modelleri; M4/Kısa: OpenGameArt; Mavi Bant: Poly Haven (CC0)
+- Freesound (CC0): isabet sesleri (267341, 276600, 321810, 453756, 511194, 421929, 816413), şarjör, adım, patlama, flaş vb. (numaralar araclar/ses.py içinde)
+- Google Fonts: Barlow
+- Desenlerin bir bölümü ve Arena çıkartmaları geliştiricinin kendi Web Arena oyunundan
+- Kaplama desenleri bu oyun için çizildi (istemci/kaplama.mjs)
+- Bot karar yapısı geliştiricinin Web Arena oyunundan uyarlandı
+- Birinci şahıs eli ve ten dokusu: DigitalN8m4r3 (Miodrag Sejic) / godot-xr-tools (CC0); eldiven dokuları bu oyun için üretildi
+- Taşhan dokuları ve eşyaları, gökyüzü: Poly Haven (CC0). Yazı: Barlow (OFL)
+- Müzik kitleri (kesilip ses düzeyi ayarlandı, OpenGameArt): Ironbound, Zander Noriega (CC BY 3.0); Blackmoor Colossus ve Dream Raid, Matthew Pablo (CC BY 3.0); Vice Police, Tausdei (CC BY 3.0); New Hip Hop Beat, vandalorum (CC BY 4.0); HellDrake, Centurion_of_war (CC BY 4.0); Arabian Princess, Clement Panchout (CC BY 4.0); Funkorama, Kevin MacLeod (CC BY 3.0); Fighting Back, DJ SASS / SplitDish Media (CC BY 3.0); Night Prowler, section31 (CC0)
+- Çıkartma ve grafiti simgeleri: game-icons.net (CC BY 3.0; Lorc, Delapouite, Skoll, DarkZaitzev, Cathelineau). Yazı tipleri: Bangers, Bungee, Black Ops One, Lilita One, Rubik Spray Paint, Rubik Wet Paint (OFL)
+- Kaplama dokuları (ceviz, pas, zırh): Poly Haven (CC0). Sprey sesi: Freesound 436774, 404928 (CC0)
+- Bağlantı: PeerJS (MIT)
+- Zemin adım sesleri: Freesound 148462, 244590, 340983 (CC0). Depo ve Teras dokuları, eşyaları: Poly Haven (CC0)
+- Duman, toz, patlama ve alev kareleri: Unity VFX Image Sequences (CC0, Unity Technologies); namlu alevi ve mermi delikleri bu kareler ve bu oyun için üretildi
+
+## Bıçak modelleri (24 Kas 2026)
+- Bıçak (kelebek): "Butterfly Knife NOX Balisong | НОКС Балисонг", frobin, Sketchfab, https://sketchfab.com/3d-models/none-e2b7ed11b1b443c69bb6b3d7ce9aeed8 (CC BY 4.0; Objaverse arşivinden). Değişiklik: eksen, ölçek, 1024 doku, marka yazıları silindi.
+- Bıçak (pala): "Machete", Belonosoff, Sketchfab, https://sketchfab.com/3d-models/none-340a3bed238f48b0aa169c38e1e75066 (CC BY 4.0; Objaverse arşivinden). Değişiklik: eksen, ölçek, 1024 doku, marka yazıları silindi.
+- Bıçak (kukri): "Kukri knife", maxij174, Sketchfab, https://sketchfab.com/3d-models/none-1964c05fd5b9462791219c90fa2d24a0 (CC BY 4.0; Objaverse arşivinden). Değişiklik: eksen, ölçek, 1024 doku, marka yazıları silindi.
+- Bıçak (süngü): "M9 Bayonet knife", michaelkarel, Sketchfab, https://sketchfab.com/3d-models/none-eb61a59f65e449d2a2eabbaef76a4a43 (CC BY 4.0; Objaverse arşivinden). Değişiklik: eksen, ölçek, 1024 doku, marka yazıları silindi.
+- Bıçak (komando): "Fighting Ka-Bar knifes", vitvitskyi, Sketchfab, https://sketchfab.com/3d-models/none-b3c3a8c7c28349268f6631567cf01d8a (CC BY 4.0; Objaverse arşivinden). Değişiklik: eksen, ölçek, 1024 doku, marka yazıları silindi.
+- Bıçak (tanto): "Recon Tanto knife", den4ik4irik, Sketchfab, https://sketchfab.com/3d-models/none-c7175866f13e4fdbbf678ffca46a2698 (CC BY 4.0; Objaverse arşivinden). Değişiklik: eksen, ölçek, 1024 doku, marka yazıları silindi.
+- Bıçak (hançer): "Dagger with Scabbard", ArmsMuseum, Sketchfab, https://sketchfab.com/3d-models/none-2ebae99a9a314991923efccde50118f3 (CC0; Objaverse arşivinden). Değişiklik: eksen, ölçek, 1024 doku, marka yazıları silindi.
+- Bıçak (yatağan): "Yatagan Sword (Ottoman)", Mustafa97, Sketchfab, https://sketchfab.com/3d-models/none-ad0b79e358f24b96a44fd7cf3b89f71d (CC BY 4.0; Objaverse arşivinden). Değişiklik: eksen, ölçek, 1024 doku, marka yazıları silindi.
+- Bıçak (satır): "Cleaver - Butcher's Best Friend", 3dsofsan, Sketchfab, https://sketchfab.com/3d-models/none-8b3a394b1e6741e187e15b8dc5075b54 (CC BY 4.0; Objaverse arşivinden). Değişiklik: eksen, ölçek, 1024 doku, marka yazıları silindi.
+- Bıçak (kunai): "3D Low Poly Kunai", Cajetan, Sketchfab, https://sketchfab.com/3d-models/none-2444ae5745824865b1b37cffec888c12 (CC BY 4.0; Objaverse arşivinden). Değişiklik: eksen, ölçek, 1024 doku, marka yazıları silindi.
+- Bıçak (sustalı): "Stiletto Knife", komov, Sketchfab, https://sketchfab.com/3d-models/none-9e5073a605db4884826ea78acc3ad3a0 (CC BY 4.0; Objaverse arşivinden). Değişiklik: eksen, ölçek, 1024 doku, marka yazıları silindi.
+- Katana, balta, şövalye hançeri: Poly Haven (CC0)
+- Bıçak sesleri (Freesound, CC0): 853769, 431533, 466216, 655341, 528710, 189209, 507466, 276600, 535359, 395373. Destan kaplama sesleri: 244926, 386385, 534023, 512471, 268580, 343927, 697363, 333064, 47646
+- Karambit (Neon Talon): geliştiricinin Meshy modeli
+- Anime koleksiyonu sesleri (Freesound, CC0): 714936 koto, 767322 katana, 169855 rüzgâr çanı, 634005 tilki, 315888 festival davulu, 131348 tapınak zili, 342541 ve 170311 kâğıt, 195355 müzik kutusu
