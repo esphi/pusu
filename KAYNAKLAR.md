@@ -33,5 +33,16 @@
 - Bıçak (sustalı): "Stiletto Knife", komov, Sketchfab, https://sketchfab.com/3d-models/none-9e5073a605db4884826ea78acc3ad3a0 (CC BY 4.0; Objaverse arşivinden). Değişiklik: eksen, ölçek, 1024 doku, marka yazıları silindi.
 - Katana, balta, şövalye hançeri: Poly Haven (CC0)
 - Bıçak sesleri (Freesound, CC0): 853769, 431533, 466216, 655341, 528710, 189209, 507466, 276600, 535359, 395373. Destan kaplama sesleri: 244926, 386385, 534023, 512471, 268580, 343927, 697363, 333064, 47646
-- Karambit (Neon Talon): geliştiricinin Meshy modeli
+- Karambit: geliştiricinin Meshy modeli (neon boyası 25 Kas 2026'da kaldırıldı)
 - Anime koleksiyonu sesleri (Freesound, CC0): 714936 koto, 767322 katana, 169855 rüzgâr çanı, 634005 tilki, 315888 festival davulu, 131348 tapınak zili, 342541 ve 170311 kâğıt, 195355 müzik kutusu
+
+## T / CT silahları (25 Kas 2026)
+- MPT-76, HK G3, Tec-9, Canik TP9 Gen2, SAR9 CX: geliştiricinin Meshy modelleri. Değişiklik: eksen, ölçek, sadeleştirme, çelik/polimer fabrika boyası.
+- MAC-10: "Ingram Mac 10", FameProductions, Sketchfab, https://sketchfab.com/3d-models/a8d93858e7a2476db389ba3c05ca5a85 (CC BY 4.0; Objaverse arşivinden). Değişiklik: eksen, ölçek, 1024 doku.
+- MP5: "Low Poly HK MP5", HydratedGames, Sketchfab, https://sketchfab.com/3d-models/015b16fb858f42d8a25a7769d237a7d6 (CC BY 4.0; Objaverse arşivinden). Değişiklik: eksen, ölçek, siyah parlak boya.
+- MP9: "MP9", altncaglar, Sketchfab, https://sketchfab.com/3d-models/9e6fa52550f84b2096905a7bde56d63a (CC BY 4.0; Objaverse arşivinden). Değişiklik: eksen, ölçek, 1024 doku.
+- UMP-45: "UMP45", BOGENK223, Sketchfab, https://sketchfab.com/3d-models/b116f2939efa415b84651d15cc137cbf (CC BY 4.0; Objaverse arşivinden). Değişiklik: eksen, ölçek, boya.
+- Sawed-Off: "Sawed-off Shotgun", AnonyTheDrone, Sketchfab, https://sketchfab.com/3d-models/955a7d1a195848b990bd8362396375bd (CC BY 4.0; Objaverse arşivinden). Değişiklik: eksen, ölçek, 1024 doku.
+- Glock-18, Desert Eagle, AK-47, M4A4, AWP, SSG 08, XM1014: önceki modeller (Seri 9, Kartal .50, AKM, M4, Uzun .338, Keskin .308, Pompalı) gerçek adlarıyla.
+- Karambit: modele gömülü neon boya kaldırıldı, sade çelik.
+- Bütün ateşli silahlar (eski modeller dahil) tek tip siyah parlak fabrika finişine çevrildi (renk dokusu koyulaştırıldı, pürüz ~0).
