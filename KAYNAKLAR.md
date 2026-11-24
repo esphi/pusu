@@ -43,5 +43,6 @@
 - MP9: "MP9", altncaglar, Sketchfab, https://sketchfab.com/3d-models/9e6fa52550f84b2096905a7bde56d63a (CC BY 4.0; Objaverse arşivinden). Değişiklik: eksen, ölçek, 1024 doku.
 - UMP-45: "UMP45", BOGENK223, Sketchfab, https://sketchfab.com/3d-models/b116f2939efa415b84651d15cc137cbf (CC BY 4.0; Objaverse arşivinden). Değişiklik: eksen, ölçek, boya.
 - Sawed-Off: "Sawed-off Shotgun", AnonyTheDrone, Sketchfab, https://sketchfab.com/3d-models/955a7d1a195848b990bd8362396375bd (CC BY 4.0; Objaverse arşivinden). Değişiklik: eksen, ölçek, 1024 doku.
-- Glock-18, Desert Eagle, AK-47, M4A4, AWP, SSG 08, XM1014: önceki modeller (Seri 9, Kartal .50, AKM, M4, Uzun .338, Keskin .308, Pompalı) gerçek adlarıyla.
-- Bütün ateşli silahlar (eski modeller dahil) tek tip siyah parlak fabrika finişine çevrildi (renk dokusu koyulaştırıldı, pürüz ~0).
+- Glock-18, Desert Eagle, AK-47, M4A4, AWP, SSG 08, Remington 870: önceki modeller (Seri 9, Kartal .50, AKM, M4, Uzun .338, Keskin .308, Pompalı) gerçek adlarıyla.
+- Skinsiz görünümler (25 Kas 2026, gece): eski silahlar kendi dokularına, MAC-10/MP9/Sawed-Off Sketchfab'daki kendi dokularına döndü (MAC-10'un tel dipçiği çıkarıldı); G3, MPT-76, Tec-9, SAR9, Canik, UMP-45, MP5 için gerçek fotoğraflara bakılarak fabrika rengi pişirildi (`blender/fabrika.py`).
+- Yaşayan koleksiyonu sesleri (Freesound, CC0): 718503, 833891, 482953 su; 414260, 275802, 731270 saat; 345636, 518943 def; 124545 damla; 676456, 689998 kanat; 485770 bozuk para
