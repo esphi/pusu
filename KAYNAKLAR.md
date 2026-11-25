@@ -46,3 +46,4 @@
 - Glock-18, Desert Eagle, AK-47, M4A4, AWP, SSG 08, Remington 870: önceki modeller (Seri 9, Kartal .50, AKM, M4, Uzun .338, Keskin .308, Pompalı) gerçek adlarıyla.
 - Skinsiz görünümler (25 Kas 2026, gece): eski silahlar kendi dokularına, MAC-10/MP9/Sawed-Off Sketchfab'daki kendi dokularına döndü (MAC-10'un tel dipçiği çıkarıldı); G3, MPT-76, Tec-9, SAR9, Canik, UMP-45, MP5 için gerçek fotoğraflara bakılarak fabrika rengi pişirildi (`blender/fabrika.py`).
 - Yaşayan koleksiyonu sesleri (Freesound, CC0): 718503, 833891, 482953 su; 414260, 275802, 731270 saat; 345636, 518943 def; 124545 damla; 676456, 689998 kanat; 485770 bozuk para
+- Drive'dan (Ömer/Emre, Meshy): `akm_ucak`, `akm_obsidyen`, `akm_bocek`, `ajan_samsung` (`blender/drive_ak.py`, `blender/drive_samsung.py`, `araclar/samsung_glb.py`). `lu0–4`, `luson` sesleri: TikTok'taki "lülülülü hamam böceği" akımından kısa kesit (YouTube rVaM5r3LgII), telifsiz değil.
