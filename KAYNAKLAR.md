@@ -49,5 +49,6 @@
 - Drive'dan (Ömer/Emre, Meshy): `akm_ucak`, `akm_obsidyen`, `akm_bocek`, `ajan_samsung` (`blender/drive_ak.py`, `blender/drive_samsung.py`, `araclar/samsung_glb.py`). `lu0–4`, `luson` sesleri: TikTok'taki "lülülülü hamam böceği" akımından kısa kesit (YouTube rVaM5r3LgII), telifsiz değil.
 
 ## Bombalar (25 Kas 2026)
-- HE Bombası, Flashbang, Sis Bombası (`model/bomba_el|flas|sis.glb`): geliştiricinin Meshy modelleri (Drive). Değişiklik: ölçek (12–14 cm), 14 bin üçgene sadeleştirme, 1024 webp doku. Molotof, Incendiary, Decoy ve paket koddan çiziliyor.
+- HE Bombası, Flashbang, Sis Bombası (`model/bomba_el|flas|sis.glb`): geliştiricinin Meshy modelleri (Drive). Değişiklik: ölçek (12–14 cm), 14 bin üçgene sadeleştirme, 1024 webp doku.
+- Molotof, Incendiary, Decoy, C4 paketi (`model/bomba_molo|yangin|sahte|paket.glb`): Meshy ile üretildi (nano-banana-pro tasarım görseli → meshy-7.1 + meshy-7 doku). Değişiklik: ölçek (molotof 24 cm, Incendiary/Decoy 14 cm, C4 16,5 cm), 14–21 bin üçgen, 1024 webp doku; molotof alevi ve C4 LED'i eski çizimden modele takılı.
 - Karambit skinleri "Fena", "Kara Veba", "Yeni" (`model/b_karambit_fena|karaveba|yeni.glb`): geliştiricinin Meshy modelleri (Drive). Değişiklik: oyundaki karambitin halka/uç noktalarına hizalama, ölçek, 27–28 bin üçgene sadeleştirme, 1024 webp doku.
