@@ -13,7 +13,7 @@
 - Birinci şahıs eli ve ten dokusu: DigitalN8m4r3 (Miodrag Sejic) / godot-xr-tools (CC0); eldiven dokuları bu oyun için üretildi
 - Taşhan dokuları ve eşyaları, gökyüzü: Poly Haven (CC0). Yazı: Barlow (OFL)
 - Müzik kitleri (kesilip ses düzeyi ayarlandı; maç başı, raund ve maç sonu parçaları aynı kayıtlardan kesildi, kaybetme parçaları yavaşlatıldı ve boğuklaştırıldı; OpenGameArt): Ironbound, Zander Noriega (CC BY 3.0); Blackmoor Colossus ve Dream Raid, Matthew Pablo (CC BY 3.0); Vice Police, Tausdei (CC BY 3.0); New Hip Hop Beat, vandalorum (CC BY 4.0); HellDrake, Centurion_of_war (CC BY 4.0); Arabian Princess, Clement Panchout (CC BY 4.0); Funkorama, Kevin MacLeod (CC BY 3.0); Fighting Back, DJ SASS / SplitDish Media (CC BY 3.0); Night Prowler, section31 (CC0)
-- Çıkartma ve grafiti simgeleri: game-icons.net (CC BY 3.0; Lorc, Delapouite, Skoll, DarkZaitzev, Cathelineau). Yazı tipleri: Bangers, Bungee, Black Ops One, Lilita One, Rubik Spray Paint, Rubik Wet Paint (OFL)
+- Çıkartma, grafiti, ajan ve yetenek simgeleri: game-icons.net (CC BY 3.0; Lorc, Delapouite, Skoll, sbed, Caro Asercion, DarkZaitzev, Cathelineau). Yazı tipleri: Bangers, Bungee, Black Ops One, Lilita One, Rubik Spray Paint, Rubik Wet Paint (OFL)
 - Kaplama dokuları (ceviz, pas, zırh): Poly Haven (CC0). Sprey sesi: Freesound 436774, 404928 (CC0)
 - Bağlantı: PeerJS (MIT)
 - Zemin adım sesleri: Freesound 148462, 244590, 340983 (CC0). Depo ve Teras dokuları, eşyaları: Poly Haven (CC0)
