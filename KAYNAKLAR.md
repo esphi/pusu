@@ -50,3 +50,4 @@
 
 ## Bombalar (25 Kas 2026)
 - HE Bombası, Flashbang, Sis Bombası (`model/bomba_el|flas|sis.glb`): geliştiricinin Meshy modelleri (Drive). Değişiklik: ölçek (12–14 cm), 14 bin üçgene sadeleştirme, 1024 webp doku. Molotof, Incendiary, Decoy ve paket koddan çiziliyor.
+- Karambit skinleri "Fena", "Kara Veba", "Yeni" (`model/b_karambit_fena|karaveba|yeni.glb`): geliştiricinin Meshy modelleri (Drive). Değişiklik: oyundaki karambitin halka/uç noktalarına hizalama, ölçek, 27–28 bin üçgene sadeleştirme, 1024 webp doku.
