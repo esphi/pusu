@@ -28,8 +28,9 @@ document.addEventListener("pointerover", (e) => {
 document.addEventListener("pointerdown", (e) => { const b = e.target.closest?.("#menu button, #menu .bt, .perde button"); if (b && !b.disabled) ses("tiklat"); }, { passive: true });
 
 // ---------- kayan sekme çizgisi
-const cizgiGuncelle = () => {
-  const nav = document.querySelector("#menu header.ub nav"); if (!nav) return;
+const cizgiGuncelle = () => { for (const s of ["#menu header.ub nav", "#envanter > header nav"]) cizgiTek(document.querySelector(s)); };
+const cizgiTek = (nav) => {
+  if (!nav || !nav.offsetParent && getComputedStyle(nav).display === "none") return;
   let c = nav.querySelector(".akis-cizgi"); if (!c) { c = document.createElement("span"); c.className = "akis-cizgi"; nav.append(c); }
   const on = nav.querySelector("button.on"); if (!on) { c.style.opacity = 0; return; }
   c.style.opacity = 1; c.style.width = on.offsetWidth * 0.6 + "px"; c.style.transform = `translateX(${on.offsetLeft + on.offsetWidth * 0.2}px)`;
@@ -116,4 +117,12 @@ new MutationObserver((L) => {
   }
 }).observe(document.body, { childList: true, attributes: true, attributeFilter: ["hidden"], subtree: true });
 addEventListener("resize", () => cizgiGuncelle());
+// envanter: sekme (main sınıfı) değişince içerik akarak gelir, çizgi kayar
+let envMain = "";
+new MutationObserver(() => {
+  const e = document.querySelector("#envanter"); if (!e || e.hidden) { envMain = ""; return; }
+  cizgiTek(e.querySelector(":scope > header nav"));
+  const m = e.querySelector("main"), imza = m ? m.className : "";
+  if (imza && imza !== envMain) { envMain = imza; e.classList.remove("akis-sekme"); void e.offsetWidth; e.classList.add("akis-sekme"); clearTimeout(e._sz); e._sz = setTimeout(() => e.classList.remove("akis-sekme"), 700); }
+}).observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ["class", "hidden"] });
 window.PUSU_AKIS = { ses };

@@ -135,3 +135,95 @@ body.akis-menu canvas#k{transition:transform .9s var(--e-yay);will-change:transf
 .rh-final b{display:block;font:600 34px/1 BarlowC,sans-serif;margin:12px 0 8px}.rh-final p{margin:0;color:#c9ccd0;font:500 15px/1.5 Barlow,sans-serif}
 .rh-rozet{width:58px;height:58px;margin:0 auto;display:grid;place-items:center;border-radius:50%;font:700 30px/1 Barlow,sans-serif;color:#0d1a0a;background:#7fbf6a;
   box-shadow:0 0 0 8px rgba(127,191,106,.15),0 0 40px rgba(127,191,106,.5);animation:rhPop .7s var(--e-yay) .15s both}
+
+/* =====================================================================================
+   ENVANTER — yeni görsel dil: nötr yüzeyler, spot ışıklı kartlar, nadirlik yalnız vurgu
+   ===================================================================================== */
+#envanter{--ev-y0:#0a0c0f;--ev-y1:#101216;--ev-y2:#15181d;--ev-y3:#1b1f25;--ev-cz:rgba(255,255,255,.06);--ev-cz2:rgba(255,255,255,.11);--ev-yz:#eef0ec;--ev-sl:#9ba1a8;--ev-rd:14px;
+  background:radial-gradient(120% 70% at 50% -10%,#1a1e25 0%,#0d0f13 55%,#0a0c0f 100%)!important}
+#envanter > header{backdrop-filter:blur(20px) saturate(1.3);-webkit-backdrop-filter:blur(20px) saturate(1.3);background:rgba(10,12,15,.7)!important;border-bottom:1px solid var(--ev-cz)!important}
+#envanter > header nav{position:relative}
+#envanter > header nav button{opacity:.66;transition:opacity .25s var(--e-yay),color .25s}
+#envanter > header nav button:hover,#envanter > header nav button.on{opacity:1}
+#envanter > header nav button.on::after,#envanter > header nav button::after{opacity:0!important}
+#envanter > header nav button i{font-style:normal;opacity:.55;font-size:.8em;margin-left:3px}
+#envanter h3,#envanter h4{letter-spacing:.02em}
+#envanter h4{font-size:12px!important;text-transform:uppercase;letter-spacing:.18em!important;color:var(--ev-sl)!important;font-weight:600}
+
+/* ---------- ortak kart */
+#envanter button:has(> img[src*="kart/"]),#envanter main.kart .og,#envanter .gnK,#envanter .sk,#envanter .kmL > button,#envanter .evK > button,#envanter .skL > button{
+  position:relative;overflow:hidden;border-radius:var(--ev-rd)!important;border:1px solid var(--ev-cz)!important;
+  background:radial-gradient(90% 75% at 50% 32%,rgba(255,255,255,.075),transparent 68%),linear-gradient(180deg,var(--ev-y3),var(--ev-y2))!important;
+  box-shadow:inset 0 -2px 0 color-mix(in srgb,var(--r,#4a5159) 90%,transparent),0 1px 0 rgba(255,255,255,.03) inset!important;
+  transition:translate .35s var(--e-yay),scale .2s var(--e-yay),border-color .35s var(--e-yay),box-shadow .35s var(--e-yay)!important}
+#envanter button:has(> img[src*="kart/"]) img,#envanter main.kart .og img,#envanter .gnK img,#envanter .sk img,#envanter .kmL > button img,#envanter .evK > button img{transition:transform .55s var(--e-yay),filter .35s;filter:drop-shadow(0 8px 14px rgba(0,0,0,.55))}
+#envanter button:has(> img[src*="kart/"]):hover,#envanter main.kart .og:hover,#envanter .gnK:hover,#envanter .sk:hover,#envanter .kmL > button:hover,#envanter .evK > button:hover,#envanter .skL > button:hover{
+  translate:0 -3px;border-color:color-mix(in srgb,var(--r,#8a9099) 45%,transparent)!important;
+  box-shadow:inset 0 -2px 0 var(--r,#4a5159),0 16px 34px -18px color-mix(in srgb,var(--r,#000) 70%,#000)!important}
+#envanter button:has(> img[src*="kart/"]):hover img,#envanter main.kart .og:hover img,#envanter .gnK:hover img,#envanter .sk:hover img,#envanter .kmL > button:hover img,#envanter .evK > button:hover img{transform:scale(1.06)}
+#envanter .sk.on,#envanter .evK > button.on,#envanter .gnK.on{border-color:color-mix(in srgb,var(--r,#f2a531) 70%,transparent)!important;box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--r,#f2a531) 50%,transparent),inset 0 -2px 0 var(--r,#f2a531)!important}
+#envanter b{letter-spacing:.01em}
+
+/* ---------- segment kontrolleri (alt sekmeler, filtreler) */
+#envanter .seg,#envanter .seg2,#envanter .svF,#envanter .kmN{display:inline-flex!important;gap:2px;padding:3px;border-radius:11px;background:rgba(255,255,255,.05);border:1px solid var(--ev-cz)}
+#envanter .seg button,#envanter .seg2 button,#envanter .svF button,#envanter .kmN button{border:0!important;border-radius:8px!important;background:transparent!important;color:var(--ev-sl)!important;padding:7px 12px!important;transition:background-color .3s var(--e-yay),color .2s!important}
+#envanter .seg button.on,#envanter .seg2 button.on,#envanter .svF button.on,#envanter .kmN button.on{background:rgba(255,255,255,.1)!important;color:var(--ev-yz)!important;box-shadow:0 1px 2px rgba(0,0,0,.4)}
+#envanter .seg button:hover,#envanter .seg2 button:hover,#envanter .svF button:hover,#envanter .kmN button:hover{color:var(--ev-yz)!important}
+#envanter input.gr2,#envanter select.gr2{border-radius:10px!important;background:rgba(255,255,255,.04)!important;border:1px solid var(--ev-cz)!important}
+#envanter input.gr2:focus,#envanter select.gr2:focus{border-color:rgba(242,165,49,.5)!important}
+
+/* ---------- BIÇAK: solda tür paneli · ortada önizleme · sağda kaplamalar */
+#envanter main.bicak{display:grid!important;grid-template-columns:230px minmax(0,1fr) 430px;grid-template-rows:auto minmax(0,1fr);gap:10px 22px;padding:22px 26px!important;height:100%;box-sizing:border-box}
+#envanter main.bicak > .evG{display:contents!important}
+#envanter main.bicak > .evG > label:nth-of-type(1){grid-column:1;grid-row:1;align-self:end}
+#envanter main.bicak > .evG > .evT{grid-column:1;grid-row:2;display:flex!important;flex-direction:column;gap:3px;overflow:auto;padding:6px;border-radius:var(--ev-rd);background:rgba(255,255,255,.03);border:1px solid var(--ev-cz)}
+#envanter main.bicak > .evO{grid-column:2;grid-row:1/3;min-width:0;border-radius:18px;background:radial-gradient(70% 60% at 50% 55%,rgba(255,255,255,.06),transparent 70%)}
+#envanter main.bicak > .evG > label:nth-of-type(2){grid-column:3;grid-row:1;align-self:end}
+#envanter main.bicak > .evG > .evK{grid-column:3;grid-row:2;overflow:auto;padding-right:6px}
+#envanter main.bicak > .evG > label{font:600 12px/1 BarlowC,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--ev-sl)}
+#envanter .evT button{width:100%;text-align:left!important;justify-content:flex-start!important;padding:11px 14px!important;border-radius:10px!important;border:1px solid transparent!important;
+  background:transparent!important;color:var(--ev-sl)!important;position:relative;transition:background-color .3s var(--e-yay),color .2s,padding-left .35s var(--e-yay)!important}
+#envanter .evT button:hover{background:rgba(255,255,255,.05)!important;color:var(--ev-yz)!important;padding-left:18px!important}
+#envanter .evT button.on{background:rgba(242,165,49,.11)!important;border-color:rgba(242,165,49,.32)!important;color:#fff!important;padding-left:18px!important}
+#envanter .evT button.on::before{content:"";position:absolute;left:6px;top:28%;bottom:28%;width:3px;border-radius:3px;background:var(--keh);box-shadow:0 0 10px var(--keh)}
+
+/* ---------- KASALAR: eşit kartlar, sade başlıklar */
+#envanter main.kasaM .kmU{display:flex;align-items:center;gap:14px}
+#envanter main.kasaM .kmGr{display:block!important}
+#envanter main.kasaM .kmGr > div{margin:0 0 26px!important}
+#envanter main.kasaM .kmL{display:grid!important;grid-template-columns:repeat(auto-fill,minmax(178px,1fr));gap:14px!important}
+#envanter main.kasaM .kmL > button{width:auto!important;height:214px!important;min-height:0!important;display:flex!important;flex-direction:column;justify-content:flex-end;align-items:flex-start;text-align:left;padding:14px!important;grid-column:auto!important}
+#envanter main.kasaM .kmL > button img.ks{position:absolute;left:50%;top:16px;translate:-50% 0;width:auto!important;max-width:78%;height:118px!important;object-fit:contain;margin:0!important}
+#envanter main.kasaM .kmL > button b{font:600 17px/1.15 BarlowC,sans-serif;letter-spacing:.02em;color:var(--ev-yz)}
+#envanter main.kasaM .kmL > button small{color:var(--keh);font-weight:600;margin-top:3px}
+#envanter main.kasaM .kmL > button em{position:absolute;top:10px;right:10px;padding:4px 9px;border-radius:999px;font:600 11px/1.2 Barlow,sans-serif;font-style:normal;
+  color:#e8eaee;background:rgba(0,0,0,.55);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid var(--ev-cz2)}
+#envanter .kmG{border-radius:11px!important}
+
+/* ---------- SİLAHLAR: sol liste satırları */
+#envanter .svL > *:not(h4){border-radius:10px!important;transition:background-color .3s var(--e-yay),translate .3s var(--e-yay)!important}
+#envanter .svL > *:not(h4):hover{background:rgba(255,255,255,.05)!important;translate:3px 0}
+#envanter .evO{border-radius:18px}
+
+/* ---------- sekme değişimi: içerik akarak gelir */
+#envanter.akis-sekme main > *{animation:akisGir .5s var(--e-yay) both}
+#envanter.akis-sekme main > :nth-child(2){animation-delay:.05s}#envanter.akis-sekme main > :nth-child(3){animation-delay:.1s}
+#envanter ::-webkit-scrollbar{width:8px;height:8px}#envanter ::-webkit-scrollbar-thumb{background:rgba(255,255,255,.12);border-radius:8px}#envanter ::-webkit-scrollbar-track{background:transparent}
+#envanter main.bicak > .evG > .evK{grid-auto-rows:max-content!important;align-content:start!important;align-items:start}
+#envanter main.bicak > .evG > .evK > button{height:auto!important;min-height:96px}
+
+#envanter main.kart .og{cursor:pointer}
+#envanter main.kart .og small{opacity:.9}
+
+/* bıçak kaplama kartları: bıçak kartı dolduracak kadar büyük, açıklama tek satır */
+#envanter main.bicak .evK{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}
+#envanter main.bicak .evK > button{min-height:124px!important;background-clip:padding-box;padding:10px 12px!important;text-align:left;display:flex!important;flex-direction:column;justify-content:flex-end;align-items:flex-start}
+#envanter main.bicak .evK > button .bkI{position:absolute!important;top:8px!important;left:6px!important;right:auto!important;bottom:auto!important;width:calc(100% - 12px)!important;height:70px!important;display:flex!important;align-items:center;justify-content:center;overflow:visible;margin:0!important;background:none!important;border:0!important;box-shadow:none!important;padding:0!important}
+#envanter main.bicak .evK > button .bkI img{width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:contain;rotate:-8deg;scale:1.25;margin:0!important;position:static!important;background:none!important}
+#envanter main.bicak .evK > button b{position:relative;font:600 15px/1.1 BarlowC,sans-serif}
+#envanter main.bicak .evK > button em{position:relative;font-style:normal;font-size:11px;color:var(--ev-sl);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+#envanter main.bicak .evK > h4{grid-column:1/-1;margin:14px 0 2px!important}
+#envanter main.bicak .evK > h4 small{display:block;text-transform:none;letter-spacing:0;font-weight:500;color:#6f757c;margin-top:3px}
+#envanter main.bicak .evK > button b,#envanter main.bicak .evK > button em{z-index:1;text-shadow:0 1px 6px rgba(0,0,0,.8)}
+#envanter main.bicak .evO .evCv{width:100%!important;height:100%!important}
+#envanter main.bicak .evK > button .fb{position:absolute;inset:10px 10px 46px;border-radius:10px;background:linear-gradient(135deg,#2b2f36,#1a1d22);opacity:.8}
