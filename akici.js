@@ -116,3 +116,4 @@ new MutationObserver((L) => {
   }
 }).observe(document.body, { childList: true, attributes: true, attributeFilter: ["hidden"], subtree: true });
 addEventListener("resize", () => cizgiGuncelle());
+window.PUSU_AKIS = { ses };

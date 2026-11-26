@@ -164,7 +164,7 @@ const oyunaGec = async () => {
     kaydet: () => gonder(),
   };
   await import(new URL(OYUN, location.href).href);
-  import("./akici.js").catch(() => {});
+  import("./akici.js").then(() => import("./rehber.js")).catch(() => {});
   const t0 = performance.now();
   const bekle = () => {
     const hazir = document.querySelector("#kur, #antr, #oynaB") && !document.querySelector("#yukle");
