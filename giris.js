@@ -12,6 +12,15 @@ const ls = {
 const kayitAnahtarlari = () => { const L = []; try { for (let i = 0; i < localStorage.length; i++) { const k = localStorage.key(i); if (k && k.startsWith("pusu.")) L.push(k); } } catch {} return L.sort(); };
 const yerelKayit = () => Object.fromEntries(kayitAnahtarlari().map((k) => [k, ls.al(k)]));
 const kayitYukle = (v) => { for (const k of kayitAnahtarlari()) ls.yaz(k, null); for (const [k, d] of Object.entries(v || {})) if (k.startsWith("pusu.") && typeof d === "string") ls.yaz(k, d); };
+// ilerleme anahtarları (yeni hesapta sıfırlanır); ayarlar (ayar, nis, ses, seslab) korunur
+const ILERLEME = ["pusu.depo", "pusu.iler", "pusu.ist", "pusu.kap", "pusu.ajanY", "pusu.sonOda", "pusu.bomba_paket"];
+const sifirdanBasla = () => {
+  if (ILERLEME.some((k) => ls.al(k) != null)) ls.yaz("pusu_yerel_yedek", JSON.stringify(yerelKayit()));
+  for (const k of ILERLEME) ls.yaz(k, null);
+  let a = {}; try { a = JSON.parse(ls.al("pusu.ayar") || "{}") || {}; } catch {}
+  a.menuM = 1; a.mz2 = 1; ls.yaz("pusu.ayar", JSON.stringify(a));
+  ls.yaz("pusu_rehber", "yeni");
+};
 const adiAyaraYaz = (ad) => { let a = {}; try { a = JSON.parse(ls.al("pusu.ayar") || "{}") || {}; } catch {} a.ad = ad; ls.yaz("pusu.ayar", JSON.stringify(a)); };
 // kullanıcı adı → Supabase'in istediği e-posta (gerçek e-posta istemiyoruz)
 const eposta = (ad) => "u" + [...new TextEncoder().encode(ad.trim().toLocaleLowerCase("tr"))].map((b) => b.toString(16).padStart(2, "0")).join("") + "@pusu.oyun";
@@ -59,7 +68,7 @@ const gorunum = {
         <label class="g-alan"><span>ŞİFRE</span><input name="sifre" type="password" autocomplete="${kayit ? "new-password" : "current-password"}" minlength="6" required placeholder="en az 6 karakter"></label>
         ${kayit ? '<label class="g-alan"><span>ŞİFRE (TEKRAR)</span><input name="sifre2" type="password" autocomplete="new-password" minlength="6" required></label>' : ""}
         <button class="g-btn g-ana" type="submit"><span>${kayit ? "HESABI OLUŞTUR" : "GİRİŞ YAP"}</span></button>
-        <p class="g-mesaj" aria-live="polite">${kayit ? "Envanterin, pulların ve istatistiklerin hesabına kaydedilir; her cihazdan aynı hesapla girersin." : ""}</p>
+        <p class="g-mesaj" aria-live="polite">${kayit ? "Yeni hesap sıfırdan başlar. Envanterin, pulların ve istatistiklerin hesabına kaydedilir; her cihazdan aynı hesapla girersin." : ""}</p>
       </form>
       <div class="g-ayrac"><span>ya da</span></div>
       <button class="g-btn g-ikincil" data-is="misafir"><span>MİSAFİR OLARAK OYNA</span></button>
@@ -115,6 +124,7 @@ const kaydol = async (ad, sifre) => {
   if (!data.session) throw new Error("Hesap açıldı ama e-posta onayı bekleniyor. Supabase'te 'Confirm email' kapatılmalı.");
   const { error: e2 } = await sb0.from("profiller").insert({ id: data.user.id, ad });
   if (e2) throw new Error(/duplicate|unique/i.test(e2.message) ? "Bu kullanıcı adı alınmış." : e2.message);
+  sifirdanBasla();
   await hesabaGec(data.user, ad);
 };
 
@@ -154,6 +164,7 @@ const oyunaGec = async () => {
     kaydet: () => gonder(),
   };
   await import(new URL(OYUN, location.href).href);
+  import("./akici.js").catch(() => {});
   const t0 = performance.now();
   const bekle = () => {
     const hazir = document.querySelector("#kur, #antr, #oynaB") && !document.querySelector("#yukle");
@@ -177,6 +188,7 @@ kok.addEventListener("submit", async (e) => {
   if (e.target.classList.contains("g-misafir")) {
     const ad = e.target.ad.value.trim();
     if (ad.length < 2 || ad.length > 16) return durum("Adın 2–16 karakter olmalı.", "hata");
+    if (!ls.al("pusu.ayar")) { ls.yaz("pusu.ayar", JSON.stringify({ menuM: 1, mz2: 1 })); ls.yaz("pusu_rehber", "yeni"); }
     adiAyaraYaz(ad); ls.yaz("pusu_misafir", "1"); oyunaGec(); return;
   }
   const f = e.target, ad = f.ad.value.trim(), sifre = f.sifre.value, kayit = !!f.sifre2;
@@ -193,7 +205,7 @@ addEventListener("keydown", (e) => { if (e.key === "Enter" && !gecildi && kart.q
 (async () => {
   // oyun dosyasını arkada indirmeye başla (çalıştırmadan)
   const on = document.createElement("link"); on.rel = "modulepreload"; on.href = OYUN; document.head.append(on);
-  if (new URLSearchParams(location.search).has("hepsi") || window.PUSU_TEST) { kok.remove(); gecildi = true; await import(new URL(OYUN, location.href).href); return; }
+  if (new URLSearchParams(location.search).has("hepsi") || window.PUSU_TEST) { kok.remove(); gecildi = true; await import(new URL(OYUN, location.href).href); import("./akici.js").catch(() => {}); return; }
   setTimeout(() => kok.classList.add("g-hazir"), 60);
   if (!HESAP_ACIK) { gorunum.misafir(false); return; }
   kart.innerHTML = '<div class="g-baslik">Bağlanılıyor…</div>';
