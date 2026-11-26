@@ -57,6 +57,11 @@
 - Destan model skinleri (`model/sawed_terlik`, `uzun_vapur`, `hizli_incebelli`, `pompa_tupgaz`, `m4_dolmus`, `mac10_simit`, `k308_marti`, `tec9_caydanlik`): Meshy ile üretildi (nano-banana-pro tasarım görseli → meshy-7.1 + meshy-7 doku). Değişiklik: taban silahın boyuna/namlusuna hizalama, ~36 bin üçgen, 1024 webp doku; noktalar ve el tutuşu taban silahtan.
 - Silah süsleri (`model/sus_*.glb`, 8 adet): Ömer, Meshy.
 
+## Yeni silahlar (26 Kas 2026)
+- P250, Five-SeveN, PP-Bizon, P90, MP7, Galil AR, FAMAS, SG 553, AUG, SVD, SCAR-20, XM1014, MAG-7 (`model/<anahtar>.glb`): Ömer, Meshy ile üretildi (nano-banana-pro tasarım görseli → meshy-t2.5 smart topology + meshy-n1 doku). Değişiklik: eksen, gerçek boy, kabza orijini ve namlu/sol/kovan/şarjör noktaları, doku aydınlatma + renk kayması giderme, renkten türetilmiş metal/pürüz dokusu, 15–26 bin üçgen, 1024 webp.
+- Atış sesleri (`ses/<anahtar>0|1|2|K|U.mp3`): kodla sentezlendi (çatlama, gövde, bum, mekanizma, oda yansıması katmanları), harici kayıt yok.
+- Kartlar (`kart/d_*`, `kart/s_*`): oyunun kendi çiziciyle.
+
 ## Ses Laboratuvarı (25 Kas 2026)
 - Bütün kayıtlar kesildi, ses düzeyi ayarlandı; kaybetme ve yenilgi parçaları hafif yavaşlatıldı, menü parçaları döngüye getirildi.
 - Kevin MacLeod (incompetech.com), CC BY 4.0: Monkeys Spinning Monkeys, Fluffing a Duck, Run Amok, Sneaky Snitch, Scheming Weasel (faster), Hidden Agenda, Pixel Peeker Polka (faster), Spazzmatica Polka, Ultra Polka, Toccata and Fugue in D Minor, Hall of the Mountain King, Funeral March for Brass, Local Forecast (Elevator), Casa Bossa Nova, Happy Happy Game Show, Exhilarate, Metalmania, Take the Lead, Kick Shock, Hyperfun, Electrodoodle, Robo-Western, Cowboy Sting, Smoking Gun, Neo Western, Volatile Reaction, Movement Proposition, Killers

@@ -125,7 +125,7 @@ label{font-size:14px;font-weight:500;color:var(--soluk);display:block;margin-bot
 .apara{margin-left:auto;font:700 30px/1 BarlowC;color:#a8e08c}
 .akap{border:0;background:rgba(255,255,255,.08);width:38px;height:38px;border-radius:9px;font-size:18px;cursor:pointer;color:inherit}
 .akap:hover{background:rgba(255,255,255,.16)}
-.agov{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px;overflow:auto;align-content:start;padding-bottom:4px;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.18) transparent}
+.agov{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:8px;overflow:auto;align-content:start;padding-bottom:4px;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.18) transparent}
 .ak{display:grid;align-content:start;gap:6px;padding:8px;border-radius:11px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.05)}
 .ak[data-n]{cursor:pointer}.ak[data-n]:hover{border-color:var(--tk)}
 .ak.sec{border-color:var(--tk);background:rgba(255,255,255,.06);box-shadow:inset 0 0 0 1px var(--tk)}
