@@ -227,3 +227,83 @@ body.akis-menu canvas#k{transition:transform .9s var(--e-yay);will-change:transf
 #envanter main.bicak .evK > button b,#envanter main.bicak .evK > button em{z-index:1;text-shadow:0 1px 6px rgba(0,0,0,.8)}
 #envanter main.bicak .evO .evCv{width:100%!important;height:100%!important}
 #envanter main.bicak .evK > button .fb{position:absolute;inset:10px 10px 46px;border-radius:10px;background:linear-gradient(135deg,#2b2f36,#1a1d22);opacity:.8}
+
+/* =====================================================================================
+   ARAYÜZ 5 — ODA / LOBİ: taktik sinematik (akici.js: arka plan haritası, kod harfleri, doluluk çentikleri)
+   ===================================================================================== */
+/* arka plan: seçili haritanın bulanık, yavaşça kayan görüntüsü */
+#menu.p-lobi .akis-lobi-arka::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,16,20,.35),rgba(14,16,20,.7) 60%,rgba(14,16,20,.9)),radial-gradient(110% 80% at 50% 10%,transparent 30%,rgba(10,12,15,.75))}
+#menu.p-lobi .akis-lobi-arka{position:absolute;inset:-40px;z-index:0;pointer-events:none;background:var(--lobi-arka) center/cover;filter:blur(22px) saturate(.7) brightness(.42);opacity:0;transition:opacity .9s var(--e-yay);animation:lobiKB 38s ease-in-out infinite alternate}
+#menu.p-lobi .akis-lobi-arka.var{opacity:1}
+#menu.p-lobi > :not(header):not(.akis-lobi-arka){position:relative;z-index:1}
+@keyframes lobiKB{from{transform:scale(1.04) translate3d(-1%,0,0)}to{transform:scale(1.12) translate3d(1.5%,-1%,0)}}
+
+/* takım sütunları */
+#menu.p-lobi .lT header{position:relative;border-bottom:0;padding-bottom:12px;align-items:flex-end}
+#menu.p-lobi .lT header::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:linear-gradient(90deg,var(--tk),color-mix(in srgb,var(--tk) 25%,transparent))}
+#menu.p-lobi .lT.t-CT header::after{background:linear-gradient(270deg,var(--tk),color-mix(in srgb,var(--tk) 25%,transparent))}
+#menu.p-lobi .lT h2{font-size:28px;letter-spacing:.01em;text-shadow:0 2px 18px rgba(0,0,0,.5)}
+#menu.p-lobi .lT h2::before{content:"";display:inline-block;width:10px;height:22px;margin-right:10px;vertical-align:-2px;background:var(--tk);clip-path:polygon(0 0,100% 18%,100% 100%,0 82%)}
+#menu.p-lobi .lT.t-CT h2::before{clip-path:polygon(0 18%,100% 0,100% 82%,0 100%)}
+#menu.p-lobi .lT header span{display:flex;flex-direction:column;align-items:flex-end;gap:5px;color:var(--y1)}
+.akis-pip{display:flex;gap:3px}
+.akis-pip i{width:14px;height:4px;background:rgba(240,238,231,.14);transition:background-color .4s var(--e-yay)}
+.akis-pip i.d{background:var(--tk)}
+
+/* oyuncu kartları */
+#menu.p-lobi .lk{height:74px;grid-template-columns:66px 1fr auto;border:1px solid rgba(240,238,231,.06);background:linear-gradient(90deg,color-mix(in srgb,var(--tk) 22%,rgba(22,26,32,.92)),rgba(22,26,32,.88) 62%);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);transition:border-color var(--s-orta) var(--e-yay),translate var(--s-orta) var(--e-yay),background-color var(--s-orta)}
+#menu.p-lobi .lk::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--tk);z-index:2}
+#menu.p-lobi .lk img{width:66px;height:74px;object-position:50% 10%;background:radial-gradient(90% 70% at 50% 90%,color-mix(in srgb,var(--tk) 45%,transparent),transparent 70%),#1a1e25;mask-image:linear-gradient(90deg,#000 70%,transparent);-webkit-mask-image:linear-gradient(90deg,#000 70%,transparent)}
+#menu.p-lobi .lk:not(.bos):hover{translate:2px 0;border-color:color-mix(in srgb,var(--tk) 50%,transparent)}
+#menu.p-lobi .lk b{font-size:21px}
+#menu.p-lobi .lk.ben{box-shadow:none;border-color:color-mix(in srgb,var(--tk) 70%,transparent)}
+#menu.p-lobi .lk.ben::after{content:"";position:absolute;top:0;bottom:0;width:40%;left:-50%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.07),transparent);animation:akisParilti 5s ease-in-out 1s infinite;pointer-events:none}
+/* boş yuva: silüet + yavaş tarama */
+#menu.p-lobi .lk.bos{opacity:1;background:rgba(18,21,26,.55);border:1px dashed rgba(240,238,231,.1)}
+#menu.p-lobi .lk.bos::before{background:color-mix(in srgb,var(--tk) 35%,transparent)}
+#menu.p-lobi .lk.bos > i{width:66px;height:74px;position:relative;background:none}
+#menu.p-lobi .lk.bos > i::before{content:"";position:absolute;inset:12px 14px 0;background:rgba(240,238,231,.09);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 50'%3E%3Ccircle cx='20' cy='14' r='9'/%3E%3Cpath d='M2 50c0-12 8-20 18-20s18 8 18 20z'/%3E%3C/svg%3E") center bottom/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 50'%3E%3Ccircle cx='20' cy='14' r='9'/%3E%3Cpath d='M2 50c0-12 8-20 18-20s18 8 18 20z'/%3E%3C/svg%3E") center bottom/contain no-repeat}
+#menu.p-lobi .lk.bos b{color:var(--y2);font-weight:500}
+#menu.p-lobi .lk.bos span{color:var(--y3)}
+#menu.p-lobi .lk.bos::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,color-mix(in srgb,var(--tk) 9%,transparent),transparent);transform:translateX(-100%);animation:lobiTara 3.6s ease-in-out infinite;pointer-events:none}
+#menu.p-lobi .lT .lk.bos:nth-of-type(3)::after{animation-delay:.5s}#menu.p-lobi .lT .lk.bos:nth-of-type(4)::after{animation-delay:1s}#menu.p-lobi .lT .lk.bos:nth-of-type(5)::after{animation-delay:1.5s}
+@keyframes lobiTara{0%{transform:translateX(-100%)}60%,100%{transform:translateX(100%)}}
+#menu.p-lobi .lT > .bt{height:46px;border:1px solid rgba(240,238,231,.1);background:rgba(22,26,32,.8);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);font-size:16px;letter-spacing:.02em}
+#menu.p-lobi .lT > .bt:hover{border-color:var(--tk);background:color-mix(in srgb,var(--tk) 16%,rgba(22,26,32,.9))}
+
+/* orta panel */
+#menu.p-lobi .lO{background:rgba(16,19,24,.86);border-color:rgba(240,238,231,.08);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 30px 80px -30px rgba(0,0,0,.8)}
+#menu.p-lobi .lH{height:clamp(140px,22vh,200px);overflow:hidden;background-size:cover;animation:lobiAfis 30s ease-in-out infinite alternate}
+@keyframes lobiAfis{from{background-size:100% auto;background-position:50% 40%}to{background-size:112% auto;background-position:46% 55%}}
+@supports not (background-size:112% auto){#menu.p-lobi .lH{animation:none}}
+#menu.p-lobi .lH::before{background:linear-gradient(0deg,rgba(16,19,24,.96),rgba(16,19,24,.2) 70%),linear-gradient(90deg,rgba(16,19,24,.55),transparent 55%)}
+#menu.p-lobi .lH h2{font-size:46px;letter-spacing:.01em;text-shadow:0 4px 24px rgba(0,0,0,.6)}
+#menu.p-lobi .lH p{font:600 15px BarlowC;letter-spacing:.14em;text-transform:uppercase;color:var(--keh)}
+#menu.p-lobi .lKod b{display:flex;gap:5px;letter-spacing:0;margin-right:0;font-size:40px}
+#menu.p-lobi .lKod b i{display:grid;place-items:center;width:42px;height:52px;font-style:normal;background:rgba(10,12,15,.72);border:1px solid rgba(240,238,231,.14);border-bottom:2px solid var(--keh);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
+#menu.p-lobi.akis-sahne .lKod b i{animation:lobiHarf .6s var(--e-yay) both}
+#menu.p-lobi.akis-sahne .lKod b i:nth-child(2){animation-delay:.07s}#menu.p-lobi.akis-sahne .lKod b i:nth-child(3){animation-delay:.14s}#menu.p-lobi.akis-sahne .lKod b i:nth-child(4){animation-delay:.21s}#menu.p-lobi.akis-sahne .lKod b i:nth-child(5){animation-delay:.28s}#menu.p-lobi.akis-sahne .lKod b i:nth-child(6){animation-delay:.35s}
+@keyframes lobiHarf{from{opacity:0;transform:perspective(300px) rotateX(-80deg) translateY(-6px)}to{opacity:1;transform:none}}
+#menu.p-lobi .lA h3{font-size:14px;letter-spacing:.16em;text-transform:uppercase;color:var(--y2);display:flex;align-items:center;gap:10px}
+#menu.p-lobi .lA h3::after{content:"";flex:1;height:1px;background:rgba(240,238,231,.08)}
+#menu.p-lobi .lHr button{border-color:rgba(240,238,231,.08)}
+#menu.p-lobi .lHr img{transition:filter .3s var(--e-yay),transform .6s var(--e-yay)}
+#menu.p-lobi .lHr button:hover:not(:disabled) img{transform:scale(1.07)}
+#menu.p-lobi .lHr .on{border-color:var(--keh);box-shadow:inset 0 0 0 1px var(--keh),0 6px 20px -8px rgba(242,165,49,.45)}
+#menu.p-lobi .lHr .on::before{content:"";position:absolute;right:6px;top:6px;z-index:2;width:18px;height:18px;border-radius:50%;background:var(--keh) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23141414' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/12px no-repeat}
+/* alt çubuk: bekleme durumu + parıltılı başlat */
+#menu.p-lobi .lB{background:rgba(12,14,18,.75);border-top-color:rgba(240,238,231,.07)}
+#menu.p-lobi .lB p{display:flex;align-items:center;gap:10px}
+#menu.p-lobi .lB p::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:var(--keh);animation:lobiNabiz 1.8s ease-in-out infinite}
+@keyframes lobiNabiz{0%,100%{opacity:.35;scale:.8}50%{opacity:1;scale:1.15}}
+#menu.p-lobi #bas{position:relative;overflow:hidden;height:56px;font-size:22px;letter-spacing:.03em;box-shadow:0 10px 30px -10px rgba(242,165,49,.55)}
+#menu.p-lobi #bas::after{content:"";position:absolute;top:0;bottom:0;width:35%;left:-50%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.35),transparent);animation:akisParilti 3.2s ease-in-out .8s infinite;pointer-events:none}
+#menu.p-lobi #bas:not(:disabled):hover{box-shadow:0 14px 36px -10px rgba(242,165,49,.7)}
+
+/* giriş: takımlar yanlardan, kartlar sırayla */
+#menu.p-lobi.akis-sahne .lT.t-T{animation:akisSol var(--s-uzun) var(--e-yay) .05s both}
+#menu.p-lobi.akis-sahne .lT.t-CT{animation:akisSag var(--s-uzun) var(--e-yay) .05s both}
+#menu.p-lobi.akis-sahne .lk{animation:akisGir var(--s-uzun) var(--e-yay) both}
+#menu.p-lobi.akis-sahne .lk:nth-of-type(2){animation-delay:.12s}#menu.p-lobi.akis-sahne .lk:nth-of-type(3){animation-delay:.18s}#menu.p-lobi.akis-sahne .lk:nth-of-type(4){animation-delay:.24s}#menu.p-lobi.akis-sahne .lk:nth-of-type(5){animation-delay:.3s}#menu.p-lobi.akis-sahne .lk:nth-of-type(6){animation-delay:.36s}
+@media(max-width:1240px){#menu.p-lobi .lT h2{font-size:22px;white-space:nowrap}#menu.p-lobi .lT h2::before{width:8px;height:18px;margin-right:8px}#menu.p-lobi .lKod b i{width:36px;height:46px;font-size:34px}}
+@media (prefers-reduced-motion:reduce){#menu.p-lobi .akis-lobi-arka,#menu.p-lobi .lH,#menu.p-lobi .lk.bos::after,#menu.p-lobi .lk.ben::after,#menu.p-lobi #bas::after,#menu.p-lobi .lB p::before{animation:none}}

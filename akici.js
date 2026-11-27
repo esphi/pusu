@@ -92,6 +92,29 @@ const dongu = () => {
 };
 requestAnimationFrame(dongu);
 
+// ---------- oda/lobi: arka planda seçili harita, harf kutulu oda kodu, takım doluluk çentikleri
+const lobi = (m) => {
+  let a = m.querySelector(":scope > .akis-lobi-arka");
+  if (!a) { a = document.createElement("div"); a.className = "akis-lobi-arka"; m.insertBefore(a, m.querySelector(":scope > header")?.nextSibling || null); }
+  const bg = m.querySelector(".lH")?.style.backgroundImage || "";
+  if (bg && a.dataset.bg !== bg) {
+    a.dataset.bg = bg; a.classList.remove("var");
+    const u = (bg.match(/url\(["']?(.*?)["']?\)/) || [])[1];
+    const im = new Image(); im.onload = () => { if (a.dataset.bg !== bg) return; a.style.setProperty("--lobi-arka", bg); a.classList.add("var"); }; im.src = u || "";
+  }
+  const kod = m.querySelector(".lKod b");
+  if (kod) { const t = kod.textContent.trim(); if (t && kod.dataset.harf !== t) { kod.dataset.harf = t; kod.innerHTML = [...t].map((c) => `<i>${c.replace(/[<>&]/g, "")}</i>`).join(""); } }
+  for (const s of m.querySelectorAll(".lT")) {
+    const sp = s.querySelector(":scope > header > span"); if (!sp) continue;
+    const tn = [...sp.childNodes].find((n) => n.nodeType === 3 && /\d+\s*\/\s*\d+/.test(n.nodeValue));
+    const mm = tn?.nodeValue.match(/(\d+)\s*\/\s*(\d+)/); if (!mm) continue;
+    const d = +mm[1], top = Math.min(10, +mm[2]), im = d + "/" + top;
+    let pp = sp.querySelector(".akis-pip"); if (pp && pp.dataset.v === im) continue;
+    if (!pp) { pp = document.createElement("b"); pp.className = "akis-pip"; sp.append(pp); }
+    pp.dataset.v = im; pp.innerHTML = Array.from({ length: top }, (_, i) => `<i class="${i < d ? "d" : ""}"></i>`).join("");
+  }
+};
+
 // ---------- DOM izleme (yalnızca menü; oyun içi HUD değişikliklerine dokunmaz)
 let bekleyen = false, izlenen = null;
 const tara = () => {
@@ -103,6 +126,7 @@ const tara = () => {
   if (imza !== sonSayfa) { sonSayfa = imza; sahne(); }
   cizgiGuncelle(); hesapDugme();
   const p = m.querySelector(".ubP"); p && pulAk(p);
+  sayfa === "p-lobi" ? lobi(m) : m.querySelector(":scope > .akis-lobi-arka")?.remove();
 };
 const gozcu = new MutationObserver(() => { if (!bekleyen) { bekleyen = true; requestAnimationFrame(tara); } });
 const bagla = () => { const m = document.querySelector("#menu"); if (m && m !== izlenen) { gozcu.disconnect(); gozcu.observe(m, { childList: true, subtree: true, characterData: true, attributes: true, attributeFilter: ["class"] }); izlenen = m; tara(); } };

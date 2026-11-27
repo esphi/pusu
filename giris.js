@@ -164,7 +164,7 @@ const oyunaGec = async () => {
     kaydet: () => gonder(),
   };
   await import(new URL(OYUN, location.href).href);
-  import("./akici.js").then(() => import("./rehber.js")).catch(() => {});
+  import("./akici.js" + new URL(import.meta.url).search).then(() => import("./rehber.js" + new URL(import.meta.url).search)).catch(() => {});
   const t0 = performance.now();
   const bekle = () => {
     const hazir = document.querySelector("#kur, #antr, #oynaB") && !document.querySelector("#yukle");
@@ -205,7 +205,7 @@ addEventListener("keydown", (e) => { if (e.key === "Enter" && !gecildi && kart.q
 (async () => {
   // oyun dosyasını arkada indirmeye başla (çalıştırmadan)
   const on = document.createElement("link"); on.rel = "modulepreload"; on.href = OYUN; document.head.append(on);
-  if (new URLSearchParams(location.search).has("hepsi") || window.PUSU_TEST) { kok.remove(); gecildi = true; await import(new URL(OYUN, location.href).href); import("./akici.js").catch(() => {}); return; }
+  if (new URLSearchParams(location.search).has("hepsi") || window.PUSU_TEST) { kok.remove(); gecildi = true; await import(new URL(OYUN, location.href).href); import("./akici.js" + new URL(import.meta.url).search).catch(() => {}); return; }
   setTimeout(() => kok.classList.add("g-hazir"), 60);
   if (!HESAP_ACIK) { gorunum.misafir(false); return; }
   kart.innerHTML = '<div class="g-baslik">Bağlanılıyor…</div>';
