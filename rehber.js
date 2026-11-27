@@ -11,8 +11,8 @@ const el = (h) => { const d = document.createElement("div"); d.innerHTML = h.tri
 const ADIMLAR = [
   { s: "#oynaB", b: "Oyna", t: "Mod ve haritayı seç, oda kur. Oda kodunu arkadaşlarına at, 5v5'e kadar birlikte oynayın." },
   { s: "#kodF", b: "Arkadaşının odası", t: "Arkadaşın oda kurduysa kodunu buraya yaz ve Katıl'a bas." },
-  { s: "#menu header.ub nav button:nth-child(2)", b: "Envanter", t: "Silah skinlerin, bıçakların, eldivenlerin ve karakterlerin burada. Kuşanmak için tıkla." },
-  { s: "#menu header.ub nav button:nth-child(3)", b: "Kasalar", t: "Maçlardan kazandığın pullarla kasa aç; şansın varsa destan bir skin düşer." },
+  { s: "#menu header.ub nav button[data-u=env]", b: "Envanter", t: "Silah skinlerin, bıçakların, eldivenlerin ve karakterlerin burada. Kuşanmak için tıkla." },
+  { s: "#menu header.ub nav button[data-u=kasa]", b: "Kasalar", t: "Maçlardan kazandığın pullarla kasa aç; şansın varsa destan bir skin düşer." },
   { s: "#menu .anGv", b: "Görevler", t: "Görevleri bitirdikçe seviye atlarsın. İlerlemen hesabına kaydedilir." },
   { s: "#antr", b: "Hazırsan başlayalım", t: "Botlara karşı kısa bir antrenmanda temel hareketleri birlikte deneyelim.", son: 1 },
 ];

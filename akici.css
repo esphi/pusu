@@ -29,30 +29,8 @@ html{scroll-behavior:smooth}
 @keyframes akisSag{from{opacity:0;transform:translate3d(18px,0,0)}to{opacity:1;transform:none}}
 #menu.akis-sahne > :not(header):not(.akis-yok){animation:akisGir var(--s-uzun) var(--e-yay) both}
 #menu.akis-sahne > :nth-child(3){animation-delay:.06s}#menu.akis-sahne > :nth-child(4){animation-delay:.12s}#menu.akis-sahne > :nth-child(5){animation-delay:.18s}
-#menu.akis-sahne .anP > *{animation:akisSol var(--s-uzun) var(--e-yay) both}
-#menu.akis-sahne .anR > *{animation:akisSag var(--s-uzun) var(--e-yay) both}
-#menu.akis-sahne .anP > :nth-child(2),#menu.akis-sahne .anR > :nth-child(2){animation-delay:.05s}
-#menu.akis-sahne .anP > :nth-child(3),#menu.akis-sahne .anR > :nth-child(3){animation-delay:.1s}
-#menu.akis-sahne .anP > :nth-child(4),#menu.akis-sahne .anR > :nth-child(4){animation-delay:.15s}
-#menu.akis-sahne .anP > :nth-child(5){animation-delay:.2s}
-#menu.akis-sahne .anF > *{animation:akisGir var(--s-uzun) var(--e-yay) both}
-#menu.akis-sahne .anF > :nth-child(2){animation-delay:.07s}#menu.akis-sahne .anF > :nth-child(3){animation-delay:.14s}
 
 /* ---------- ana menü: daha oyunsu */
-#menu.p-ana .anP h1{letter-spacing:.06em;text-shadow:0 8px 40px rgba(0,0,0,.55)}
-#menu .anO{position:relative;overflow:hidden;clip-path:polygon(0 0,calc(100% - 16px) 0,100% 16px,100% 100%,16px 100%,0 calc(100% - 16px));
-  background:linear-gradient(180deg,#ffcf6a,#f2a531)!important;box-shadow:0 14px 40px -12px rgba(242,165,49,.55)}
-#menu .anO::after{content:"";position:absolute;top:0;bottom:0;left:-50%;width:35%;transform:skewX(-20deg);pointer-events:none;
-  background:linear-gradient(90deg,transparent,rgba(255,255,255,.5),transparent);animation:akisParilti 4.5s var(--e-yay) infinite 1.5s}
-@keyframes akisParilti{0%{left:-50%}30%,100%{left:140%}}
-#menu .anO:hover{filter:brightness(1.06);box-shadow:0 18px 50px -12px rgba(242,165,49,.75)}
-#menu .anI button,#menu .anK,#menu .anR > *,#menu .anT,#menu .anY{backdrop-filter:blur(12px) saturate(1.2);-webkit-backdrop-filter:blur(12px) saturate(1.2)}
-#menu .anI button{border:1px solid rgba(255,255,255,.07)}
-#menu .anI button:hover{border-color:rgba(242,165,49,.45);box-shadow:0 10px 30px -14px rgba(0,0,0,.8)}
-#menu .anT{overflow:hidden;transition:translate var(--s-orta) var(--e-yay),box-shadow var(--s-orta) var(--e-yay),border-color var(--s-orta) var(--e-yay)}
-#menu .anT img{transition:transform .6s var(--e-yay)}
-#menu .anT:hover{translate:0 -3px;box-shadow:0 18px 40px -18px rgba(0,0,0,.9)}
-#menu .anT:hover img{transform:scale(1.04)}
 
 /* ---------- modallar */
 @keyframes akisPerde{from{opacity:0}to{opacity:1}}
@@ -307,3 +285,4 @@ body.akis-menu canvas#k{transition:transform .9s var(--e-yay);will-change:transf
 #menu.p-lobi.akis-sahne .lk:nth-of-type(2){animation-delay:.12s}#menu.p-lobi.akis-sahne .lk:nth-of-type(3){animation-delay:.18s}#menu.p-lobi.akis-sahne .lk:nth-of-type(4){animation-delay:.24s}#menu.p-lobi.akis-sahne .lk:nth-of-type(5){animation-delay:.3s}#menu.p-lobi.akis-sahne .lk:nth-of-type(6){animation-delay:.36s}
 @media(max-width:1240px){#menu.p-lobi .lT h2{font-size:22px;white-space:nowrap}#menu.p-lobi .lT h2::before{width:8px;height:18px;margin-right:8px}#menu.p-lobi .lKod b i{width:36px;height:46px;font-size:34px}}
 @media (prefers-reduced-motion:reduce){#menu.p-lobi .akis-lobi-arka,#menu.p-lobi .lH,#menu.p-lobi .lk.bos::after,#menu.p-lobi .lk.ben::after,#menu.p-lobi #bas::after,#menu.p-lobi .lB p::before{animation:none}}
+@keyframes akisParilti{0%{left:-50%}30%,100%{left:140%}}
