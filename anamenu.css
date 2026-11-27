@@ -8,8 +8,7 @@
   background:linear-gradient(180deg,rgba(7,6,5,.94) 0%,rgba(7,6,5,.7) 70%,rgba(7,6,5,.52) 100%);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);z-index:5}
 #menu.p-ana header.ub{border-bottom:0;background:linear-gradient(180deg,rgba(5,4,3,.9) 0%,rgba(5,4,3,.55) 62%,rgba(5,4,3,0) 100%);backdrop-filter:none;-webkit-backdrop-filter:none}
 #menu .ub .ubL{display:flex;align-items:center;gap:10px;padding:0;color:#fff;letter-spacing:0}
-#menu .ub .ubL svg{width:34px;height:34px;color:var(--k);filter:drop-shadow(0 0 10px rgba(245,158,27,.45))}
-#menu .ub .ubL b{font:800 italic 31px/1 BarlowC,sans-serif;letter-spacing:.05em;text-shadow:0 2px 14px rgba(0,0,0,.6)}
+#menu .ub .ubL img{height:34px;width:auto;display:block;filter:drop-shadow(0 2px 10px rgba(0,0,0,.6))}
 #menu .ub nav{gap:2px}
 #menu .ub nav button{display:flex;align-items:center;gap:9px;padding:0 15px;font:600 17px/1 BarlowC,sans-serif;letter-spacing:.02em;color:rgba(241,237,230,.6);opacity:1!important;transition:color .25s var(--yay)}
 #menu .ub nav button svg{width:19px;height:19px;flex:none;transition:color .25s var(--yay),transform .3s var(--yay)}
@@ -62,8 +61,8 @@
 /* sol sütun */
 #menu .amSol{grid-column:1;grid-row:1;align-self:center;display:flex;flex-direction:column;padding-bottom:8px;translate:calc(var(--mx) * 5px) calc(var(--my) * 3px)}
 #menu .amUst{margin:0 0 2px 4px;font:600 13px/1 BarlowC,sans-serif;letter-spacing:.44em;text-transform:uppercase;color:rgba(241,237,230,.78);text-shadow:0 1px 8px rgba(0,0,0,.8)}
-#menu .amLogo{position:relative;width:clamp(290px,25vw,392px);margin:2px 0 0 -12px;line-height:0;font-size:0}
-#menu .amLogo img{width:100%;height:auto}
+#menu .amLogo{position:relative;width:clamp(230px,18.5vw,296px);margin:12px 0 2px 2px;line-height:0;font-size:0}
+#menu .amLogo img{width:100%;height:auto;filter:drop-shadow(0 10px 26px rgba(0,0,0,.65))}
 #menu .amLogo::before{content:"";position:absolute;left:-6%;right:-4%;top:-10%;bottom:-14%;background:radial-gradient(50% 50% at 50% 55%,rgba(0,0,0,.55),transparent 75%);pointer-events:none;z-index:-1}
 #menu .amParla{position:absolute;inset:0;pointer-events:none;-webkit-mask:url(kapak/logo.webp) center/100% 100% no-repeat;mask:url(kapak/logo.webp) center/100% 100% no-repeat;
   background:linear-gradient(105deg,transparent 42%,rgba(255,255,255,.9) 50%,transparent 58%) 0 0/300% 100% no-repeat;background-position:120% 0;mix-blend-mode:overlay}
@@ -224,15 +223,15 @@
 @keyframes amParla{0%{background-position:120% 0}30%,100%{background-position:-20% 0}}
 
 /* kısa ekran (1366×768 vb.) */
-@media (max-height:800px){#menu .amUst{font-size:12px}#menu .amLogo{width:clamp(260px,22vw,330px)}#menu .amSlo{font-size:15.5px}#menu .amPr{padding-top:12px}#menu .amRt{margin-top:10px}#menu .amSt div{padding:8px 4px 9px}#menu .amIlk{margin:0 -18px;padding:9px 18px 11px;border-top:1px solid var(--czg);font:500 13px/1.35 Barlow,sans-serif;color:var(--sl);text-align:center}
+@media (max-height:800px){#menu .amUst{font-size:12px}#menu .amLogo{width:clamp(190px,15vw,236px);margin-top:8px}#menu .amSlo{font-size:15.5px}#menu .amPr{padding-top:12px}#menu .amRt{margin-top:10px}#menu .amSt div{padding:8px 4px 9px}#menu .amIlk{margin:0 -18px;padding:9px 18px 11px;border-top:1px solid var(--czg);font:500 13px/1.35 Barlow,sans-serif;color:var(--sl);text-align:center}
 #menu .amSt dd{font-size:26px}#menu .amSt svg{width:22px;height:22px}#menu .amG{padding:7px 0}#menu .amSag{gap:10px}#menu .amAlt h3{margin-bottom:7px;font-size:18px}}
 
 /* telefon: tek sütun, sağ kartlar solun altına, alt şerit yatay kaydırmalı */
 @media (max-width:820px){
-  #menu header.ub{height:60px;gap:12px;padding:0 12px}#menu .ub .ubL b{display:none}#menu .ub nav{overflow-x:auto;scrollbar-width:none}#menu .ub nav button{padding:0 10px}#menu .ub nav button span{display:none}
+  #menu header.ub{height:60px;gap:12px;padding:0 12px}#menu .ub .ubL img{height:26px}#menu .ub nav{overflow-x:auto;scrollbar-width:none}#menu .ub nav button{padding:0 10px}#menu .ub nav button span{display:none}
   #menu .ub .ubK,#menu .ub .ubP small{display:none}#menu .ub .ubI[data-u=tam]{display:none}
   #menu .am{display:flex;flex-direction:column;overflow-y:auto;overflow-x:hidden;padding:10px 16px 24px;gap:18px}
-  #menu .amSol,#menu .amSag{align-self:stretch;translate:none;margin:0}#menu .amLogo{width:min(300px,78vw)}
+  #menu .amSol,#menu .amSag{align-self:stretch;translate:none;margin:0}#menu .amLogo{width:min(230px,60vw)}
   #menu .amSerit{display:flex;overflow-x:auto;height:132px;scrollbar-width:none;gap:10px}#menu .amOk{display:none}#menu .amIz{display:contents}
   #menu .amS{flex:0 0 220px}#menu .amYk,#menu .amHk{flex:0 0 240px}
   #menu.p-ana .kyn{position:static!important;display:block;text-align:center;margin:4px 0 10px}
